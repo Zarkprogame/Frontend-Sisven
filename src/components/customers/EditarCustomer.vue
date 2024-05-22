@@ -108,7 +108,7 @@ export default {
     },
     methods: {
         cancel() {
-            this.$router.push({ name: 'customers' }) // Usar 'customers' en minúsculas
+            this.$router.push({ name: 'customers' }) 
         },
 
         async loadCustomer() {
@@ -126,7 +126,7 @@ export default {
             try {
                 const res = await axios.post(`http://127.0.0.1:8000/api/customers/${this.$route.params.id}`, this.customer)
                 if (res.status === 200) {
-                    this.$router.push({ name: 'customers' }) // Usar 'customers' en minúsculas
+                    this.$router.push({ name: 'customers' })
                     Swal.fire({
                         position: 'top-end',
                         icon: 'success',
